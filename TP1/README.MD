@@ -7,13 +7,14 @@
 - Autor: João Azevedo
 - UC: Engenharia Web
 
-## Autor
+## Autor 
 
 - id: a107367
 - nome: João Azevedo
 - foto:
 
 ## Resumo
+
 Este trabalho consiste na geração automática de um conjunto de páginas HTML a partir de um ficheiro JSON com informação sobre reparações automóveis.
 O programa lê os dados das reparações e produz um site com várias páginas interligadas.
 
