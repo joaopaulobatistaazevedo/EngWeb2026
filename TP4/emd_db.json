@@ -1718,23 +1718,6 @@
       "id": "60b3ee817af5fb3fb1e153ef"
     },
     {
-      "index": 1,
-      "dataEMD": "2019-01-01",
-      "nome": {
-        "primeiro": "Jordan",
-        "último": "Alvarez"
-      },
-      "idade": 25,
-      "género": "F",
-      "morada": "Riviera",
-      "modalidade": "Atletismo",
-      "clube": "EDViana",
-      "email": "jordan.alvarez@edviana.biz",
-      "federado": false,
-      "resultado": false,
-      "id": "60b3ee81145de55fffb7bdfa"
-    },
-    {
       "index": 2,
       "dataEMD": "2020-04-27",
       "nome": {
@@ -3229,23 +3212,6 @@
       "federado": true,
       "resultado": true,
       "id": "60b3ee812d50aad901e7e243"
-    },
-    {
-      "index": 90,
-      "dataEMD": "2019-01-29",
-      "nome": {
-        "primeiro": "Bonita",
-        "último": "Mccormick"
-      },
-      "idade": 35,
-      "género": "M",
-      "morada": "Marshall",
-      "modalidade": "Esgrima",
-      "clube": "GDGoma",
-      "email": "bonita.mccormick@gdgoma.tv",
-      "federado": false,
-      "resultado": false,
-      "id": "60b3ee816b42d22ea075aba7"
     },
     {
       "index": 91,

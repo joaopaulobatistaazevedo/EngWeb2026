@@ -1,0 +1,77 @@
+extends layout
+
+block content
+  .w3-card-4
+
+    header.w3-container.w3-teal
+      h2 Editar Registo EMD
+
+    .w3-container.w3-padding
+      form(action=`/emd/${emd.id}` method="POST")
+
+        p
+          b Data EMD:
+          br
+          input.w3-input(type="date" name="dataEMD" value=emd.dataEMD required)
+
+        p
+          b Primeiro Nome:
+          br
+          input.w3-input(type="text" name="primeiro" value=emd.nome.primeiro required)
+
+        p
+          b Último Nome:
+          br
+          input.w3-input(type="text" name="último" value=emd.nome.último required)
+
+        p
+          b Idade:
+          br
+          input.w3-input(type="number" name="idade" value=emd.idade required)
+
+        p
+          b Género:
+          br
+          select.w3-select(name="género")
+            option(value="Masculino" selected=emd.género === "Masculino") Masculino
+            option(value="Feminino" selected=emd.género === "Feminino") Feminino
+
+        p
+          b Morada:
+          br
+          input.w3-input(type="text" name="morada" value=emd.morada)
+
+        p
+          b Modalidade:
+          br
+          input.w3-input(type="text" name="modalidade" value=emd.modalidade required)
+
+        p
+          b Clube:
+          br
+          input.w3-input(type="text" name="clube" value=emd.clube)
+
+        p
+          b Email:
+          br
+          input.w3-input(type="email" name="email" value=emd.email)
+
+        p
+          b Federado:
+          br
+          select.w3-select(name="federado")
+            option(value="true" selected=emd.federado === true) Sim
+            option(value="false" selected=emd.federado === false) Não
+
+        p
+          b Resultado:
+          br
+          select.w3-select(name="resultado")
+            option(value="true" selected=emd.resultado === true) Apto
+            option(value="false" selected=emd.resultado === false) Não Apto
+
+        br
+
+        button.w3-btn.w3-teal(type="submit") Guardar
+        |  
+        a.w3-btn.w3-grey(href="/emd") Voltar

@@ -1,0 +1,77 @@
+extends layout
+
+block content
+  .w3-card-4
+
+    header.w3-container.w3-teal
+      h2 Novo Registo EMD
+
+    .w3-container.w3-padding
+      form(action="/emd" method="POST")
+
+        p
+          b Data EMD:
+          br
+          input.w3-input(type="date" name="dataEMD" required)
+
+        p
+          b Primeiro Nome:
+          br
+          input.w3-input(type="text" name="primeiro" required)
+
+        p
+          b Último Nome:
+          br
+          input.w3-input(type="text" name="último" required)
+
+        p
+          b Idade:
+          br
+          input.w3-input(type="number" name="idade" required)
+
+        p
+          b Género:
+          br
+          select.w3-select(name="género")
+            option(value="Masculino") Masculino
+            option(value="Feminino") Feminino
+
+        p
+          b Morada:
+          br
+          input.w3-input(type="text" name="morada")
+
+        p
+          b Modalidade:
+          br
+          input.w3-input(type="text" name="modalidade" required)
+
+        p
+          b Clube:
+          br
+          input.w3-input(type="text" name="clube")
+
+        p
+          b Email:
+          br
+          input.w3-input(type="email" name="email")
+
+        p
+          b Federado:
+          br
+          select.w3-select(name="federado")
+            option(value="true") Sim
+            option(value="false") Não
+
+        p
+          b Resultado:
+          br
+          select.w3-select(name="resultado")
+            option(value="true") Apto
+            option(value="false") Não Apto
+
+        br
+
+        button.w3-btn.w3-teal(type="submit") Guardar
+        |  
+        a.w3-btn.w3-grey(href="/emd") Voltar
