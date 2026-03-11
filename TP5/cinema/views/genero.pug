@@ -1,0 +1,23 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-indigo
+      h2  #{genero.nome}
+
+    .w3-container.w3-padding
+
+      p
+        b Filmes neste género (#{genero.filmes.length}):
+
+      table.w3-table-all
+        tr
+          th Título
+          th Ano
+        each f in genero.filmes
+          tr(onclick=`window.location='/filmes/${f.id}'` style="cursor:pointer")
+            td= f.title
+            td= f.year
+
+      br
+      a.w3-btn.w3-grey(href="/generos") ← Voltar à lista
