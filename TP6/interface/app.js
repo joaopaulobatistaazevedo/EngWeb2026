@@ -10,6 +10,9 @@ app.use(express.static('public'));
 const API_BASE = process.env.API_URL || "http://localhost:7789";
 
 // ─── FILMES ───────────────────────────────────────────────────────────────────
+app.get('/', (req, res) => {
+    res.redirect('/filmes');
+});
 
 app.get('/filmes', async (req, res) => {
     try {
