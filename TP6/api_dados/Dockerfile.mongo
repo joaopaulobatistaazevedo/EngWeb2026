@@ -1,0 +1,7 @@
+FROM mongo:latest
+
+# Copia os datasets e o script de inicialização
+COPY filmes_clean.json /docker-entrypoint-initdb.d/
+COPY atores.json /docker-entrypoint-initdb.d/
+COPY generos.json /docker-entrypoint-initdb.d/
+COPY mongo_init/import.sh /docker-entrypoint-initdb.d/

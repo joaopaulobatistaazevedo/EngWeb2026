@@ -1,0 +1,38 @@
+services:
+  mongodb:
+    build:
+      context: ./api_dados
+      dockerfile: Dockerfile.mongo
+    container_name: mongodb_pubs
+    networks:
+      - pubs-network
+
+  api:
+    build:
+      context: ./api_dados
+      dockerfile: Dockerfile # O teu servidor de API minimalista
+    container_name: api_dados
+    environment:
+      - MONGO_URL=mongodb://mongodb:27017/cinema
+    depends_on:
+      - mongodb
+    networks:
+      - pubs-network
+
+  interface:
+    build:
+      context: ./interface
+      dockerfile: Dockerfile.interface # Dockerfile para este novo servidor
+    container_name: interface_web
+    ports:
+      - "7790:7790"
+    environment:
+      - API_URL=http://api_dados:7789
+    depends_on:
+      - api
+    networks:
+      - pubs-network
+
+networks:
+  pubs-network:
+    driver: bridge
