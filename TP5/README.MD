@@ -11,7 +11,7 @@
 
 - id: a107367
 - nome: João Azevedo
-- foto:
+- foto: ![João Azevedo](../foto.jpeg)
 
 ## Resumo
 
